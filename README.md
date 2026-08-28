@@ -1,121 +1,160 @@
-# Star Citizen Configuration
+# Star Citizen T.16000M Config
 
-Control profiles and configuration notes for **Star Citizen**, focused on the **Thrustmaster T16000M** joystick, **Drake Cutlass Black** and **Greycat ROC**.
+A right-handed Thrustmaster T.16000M starter profile for Star Citizen.
 
-> **Status:** Work in progress. Bindings configured and tested in-game with Alpha 4.9.
+## Included Profile
 
----
+| File | Description |
+|---|---|
+| [`mappings/layout_2026_T16000M_exported.xml`](mappings/layout_2026_T16000M_exported.xml) | Exported right-handed T.16000M control profile |
 
-## Hardware
-
-| Component | Details |
-| --- | --- |
-| OS | Windows 11 Pro |
-| CPU | Intel Core i7-14700K |
-| RAM | 32 GB |
-| GPU | MSI NVIDIA GeForce RTX 4070 SUPER |
-| Joystick | Thrustmaster T16000M (right-handed, green) |
-
-## Primary Vehicles
-
-- **Drake Cutlass Black** — main ship
-- **Greycat ROC** — ground mining vehicle
-
----
-
-## Thrustmaster T16000M — Full Joystick Mapping
-
-### Axes and Slider
-
-| Control | Star Citizen Action | Notes |
-| --- | --- | --- |
-| X Axis | Yaw | Turn the ship left / right |
-| Y Axis | Pitch | Move the ship nose up / down |
-| Z Axis (twist grip) | Roll | Roll axis |
-| Slider 1 | Throttle Increase | **Inverted**; deadzone set to **0.20**; slider down = 0 m/s, slider up = full advance |
-
-### Left Base Buttons (accessible while holding the stick — priority controls)
-
-| Button | Star Citizen Action | Notes |
-| --- | --- | --- |
-| Button 5 | Noise - Deploy | Countermeasure — electronic interference against missile lock |
-| Button 6 (tap) | Cycle Master Mode (Short Press) | Change sub-mode (Flight / Quantum / Scan) |
-| Button 6 (hold) | Cycle Master Mode (Long Press) | Toggle between **SCM** and **NAV** |
-| Button 7 | Boost | Temporary thrust boost |
-| Button 8 | Space Brake | Rapid deceleration / cancel inertia |
-| Button 9 | Landing System | Landing gear toggle — **use two short taps** to deploy/retract |
-| Button 10 (tap) | Decoy - Launch Burst | Launch flares / decoys (configure burst size with Alt+H) |
-| Button 10 (hold) | Decoy - Set and Launch Burst | Increase burst count then release to launch |
-
-### Right Base Buttons (scanning and utilities — can release stick to use)
-
-| Button | Star Citizen Action | Notes |
-| --- | --- | --- |
-| Button 11 | Request Landing | ATC landing / takeoff request — no need to open mobiGlas |
-| Button 12 | Increase Scanning Angle | Widen scan cone |
-| Button 13 | Toggle Scanning Operator Mode | Enter / exit scan mode (equivalent to V) |
-| Button 14 | Activate Ping (Hold & Release) | Hold and release to emit scanning ping |
-| Button 15 | Decrease Scanning Angle | Narrow scan cone |
-| Button 16 | Toggle Headlights | Ship headlights (equivalent to L) |
-
-### Hat Switch (8-way)
-
-| Direction | Star Citizen Action | Notes |
-| --- | --- | --- |
-| Hat (all directions) | Target cycling (default profile) | Cycle Lock: Hostiles / Attackers — kept from loaded profile |
-
-> Hat directions are reserved for targeting. Adjust if a second hat or TWCS throttle is added.
-
-### Keyboard Fallbacks (essential shortcuts to keep memorised)
-
-| Key | Action |
-| --- | --- |
-| W / S | Throttle forward / backward |
-| A / D | Strafe left / right |
-| Space / Ctrl | Strafe up / down |
-| Q / E | Roll left / right |
-| Left Shift | Boost |
-| X | Space Brake |
-| B (hold) | Toggle SCM / NAV |
-| N | Landing gear |
-| V | Toggle Scanning Operator Mode / Ping |
-| H | Launch Decoy (short press) |
-| J | Deploy Noise |
-| L | Toggle Headlights |
-| R | Flight Ready |
-| F | Interact |
-| Y | Exit seat |
-| Z | Freelook toggle |
-| F4 | External camera |
-
----
-
-## Axis Inversion and Deadzone Settings
-
-| Setting | Value | Path |
-| --- | --- | --- |
-| Throttle Increase — Inversion | **Yes** | Options > Controls > Inversion Settings > Flight > Flight Movement |
-| Deadzone Slider 1 | **0.20** | Options > Controls > Joystick Sensitivity Curves |
-| Pitch inversion | No (default) | Adjust if pulling stick raises nose unexpectedly |
-
----
-
-## Planned Files
+## Quick Reference
 
 ```text
-bindings/
-└── thrustmaster-t16000m-cutlass-black.xml
+THRUSTMASTER T.16000M — RIGHT-HANDED QUICK REFERENCE
+====================================================
+
+AXES
+-----
+X Axis                     -> Yaw
+Y Axis                     -> Pitch
+Stick Twist / Z Axis       -> Roll
+Slider 1                   -> Throttle Increase
+                              Inverted
+                              Deadzone 0.20
+                              Down / toward player = 0 throttle
+                              Up / toward stick   = more throttle
+
+GRIP
+----
+B1 Trigger                 -> Fire Weapon Group 1
+                              / Launch Missiles in Missile Operator Mode
+B2 Lower centre            -> Fire Weapon Group 2
+                              / Cycle Next Missile Type in MOM
+B3 Left                    -> Cycle Lock — In View — Under Reticle
+B4 Right                   -> Missile Operator Mode
+
+HAT — TARGETING
+---------------
+Up                         -> In View Forward + Under Reticle
+Down (single press)        -> Hostiles — Reset to Closest
+Down (double press)        -> Attackers — Reset to Closest
+Left                       -> Hostiles Back (-)
+Right                      -> Hostiles Forward (+)
+
+LEFT BASE
+---------
+B5                         -> Noise — Deploy
+B6 Tap                     -> Cycle Master Mode — Short Press
+B6 Hold                    -> Cycle Master Mode — Long Press (SCM / NAV)
+B7                         -> Boost
+B8                         -> Space Brake
+B9                         -> Landing System
+B10                        -> Decoy
+                              Tap  -> Launch Burst
+                              Hold -> Set & Launch Burst
+
+RIGHT BASE
+----------
+B11                        -> Request Landing
+B12                        -> Increase Scanning Angle
+B13                        -> Toggle Scanning Operator Mode
+B14                        -> Activate Ping — Hold & Release
+B15                        -> Decrease Scanning Angle
+B16                        -> Toggle Headlights
+
+BASE LAYOUT
+-----------
+
+                    FRONT / STICK
+                         ^
+
+        LEFT BASE                         RIGHT BASE
+
+   +------+------+------+            +------+------+------+
+   |  B5  |  B6  |  B7  |            | B13  | B12  | B11  |
+   |Noise |Modes |Boost |            | Scan | Scan+| ATC  |
+   +------+------+------+            +------+------+------+
+   | B10  |  B9  |  B8  |            | B14  | B15  | B16  |
+   |Decoy | Gear |Brake |            | Ping | Scan-|Lights|
+   +------+------+------+            +------+------+------+
+
+                    YOU / REAR
 ```
 
-The exported Star Citizen control profile (`.xml`) will be added after the full configuration has been completed and tested in-game.
+## Bindings
 
-To export: **Control Profiles → Export** inside Star Citizen keybindings menu.
+### Axes
 
----
+| Control | Assignment |
+|---|---|
+| X Axis | Yaw |
+| Y Axis | Pitch |
+| Stick Twist / Z Axis | Roll |
+| Slider 1 | Throttle Increase; inverted; deadzone 0.20 |
 
-## Notes
+The throttle slider is set so that moving it down, toward the player, gives zero throttle; moving it up, toward the stick, increases throttle.
 
-- Profile built and tested with **Star Citizen Alpha 4.9**.
-- AsUpIO.sys (ASUS driver) must be stopped/disabled before launching the game or EAC will block it.
-- The Cutlass Black may occasionally require reclaiming from ASOP terminal if controls become unresponsive — this is a known session state issue, not a bindings problem.
-- Throttle Increase binding is used instead of Throttle Forward/Backward to give the full slider range to forward thrust only; reverse thrust uses **S** on keyboard.
+### Grip
+
+| Button | Assignment |
+|---|---|
+| B1 — Trigger | Fire Weapon Group 1; Launch Missiles in Missile Operator Mode |
+| B2 — Lower centre | Fire Weapon Group 2; Cycle Next Missile Type in Missile Operator Mode |
+| B3 — Left | Cycle Lock — In View — Under Reticle |
+| B4 — Right | Missile Operator Mode |
+
+### Hat — Targeting
+
+| Direction | Assignment |
+|---|---|
+| Up | In View Forward + Under Reticle |
+| Down — one press | Hostiles — Reset to Closest |
+| Down — double press | Attackers — Reset to Closest |
+| Left | Hostiles Back (-) |
+| Right | Hostiles Forward (+) |
+
+### Left Base
+
+| Button | Assignment |
+|---|---|
+| B5 | Noise — Deploy |
+| B6 — Tap | Cycle Master Mode — Short Press |
+| B6 — Hold | Cycle Master Mode — Long Press (SCM / NAV) |
+| B7 | Boost |
+| B8 | Space Brake |
+| B9 | Landing System |
+| B10 | Decoy — Tap: Launch Burst; Hold: Set & Launch Burst |
+
+### Right Base
+
+| Button | Assignment |
+|---|---|
+| B11 | Request Landing |
+| B12 | Increase Scanning Angle |
+| B13 | Toggle Scanning Operator Mode |
+| B14 | Activate Ping — Hold & Release |
+| B15 | Decrease Scanning Angle |
+| B16 | Toggle Headlights |
+
+## Installation
+
+1. Download or clone this repository.
+2. Copy `layout_2026_T16000M_exported.xml` to:
+
+   ```text
+   StarCitizen\LIVE\USER\Client\0\Controls\Mappings\
+   ```
+
+3. Start Star Citizen.
+4. Open:
+
+   ```text
+   Options > Keybindings > Advanced Controls Customization > Control Profiles
+   ```
+
+5. Select and load the profile.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 or later. See [`LICENSE.txt`](LICENSE.txt) for the complete license text.

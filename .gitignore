@@ -1,0 +1,53 @@
+# Windows Explorer and filesystem metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# Python bytecode, caches and virtual environments
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Temporary, editor and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+# Star Citizen logs, diagnostics and local state
+Game.log
+*.log
+CrashHandler/
+crash.log
+USER/
+Shaders/
+Cache/
+
+# User-specific settings and transient exports
+*.cfg
+*.profile
+*.diff
+*.json
+
+# Exported layout backups, except maintained mappings
+layout_*_exported.xml
+!mappings/
+!mappings/*.xml
